@@ -51,7 +51,7 @@ function App() {
    const addLike = (e, id) => {
     e.preventDefault();
     const updateLikes = tweets.map((item) =>
-      item.id === id ? { ...item, likes: item.likes + 1, isLiked: true } : item
+      item.id === id ? { ...item, likes: item.likes + 1} : item
     );
     setTweets(updateLikes);
   };
@@ -69,7 +69,7 @@ function App() {
   }
 
   return ( 
-    <div className="col-6 m-5">
+    <div className="col-6 main">
      <h1 class="display-4 " >Twitter</h1>
     <form className='m-2' onSubmit={(e) => 
                 onSubmit(e, tweets, setTweets, value, setValue) }>
